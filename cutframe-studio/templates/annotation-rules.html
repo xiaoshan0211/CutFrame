@@ -1,0 +1,21 @@
+<main id="annotation-rules" class="view">
+<section class="ar-page">
+  <div class="section-head"><div><span class="eyebrow">素材事实与规则版本</span><h1>素材规则</h1><p>原文与结构化结果并排核对；业务确认针对当前内容哈希，发布后只读。</p></div><button id="ar-refresh" type="button">刷新</button></div>
+  <p id="ar-message" role="status"></p><div id="ar-overview" class="ar-cards"></div>
+  <details><summary>导入批次</summary><div id="ar-batches"></div></details>
+  <div class="ar-toolbar"><label>规则包 / 已发布版本<select id="ar-package"></select></label><button id="ar-clone" type="button">从当前版本另起草稿</button><button id="ar-export" type="button">导出规则包 JSON</button><label>导入 JSON 成新草稿<input id="ar-import" type="file" accept=".json,application/json"></label></div>
+  <p id="ar-package-info"></p>
+  <details><summary>未处理原文清单（按出现次数合并）</summary><button id="ar-load-pending" type="button">刷新未处理清单</button><div id="ar-pending"></div></details>
+  <details><summary>按维度查看标签树</summary><label>维度<select id="ar-dimension"></select></label><div id="ar-tree"></div></details>
+  <div class="ar-layout"><aside><label>文案套<select id="ar-suite"></select></label><div id="ar-list"></div></aside><section>
+    <h2 id="ar-rule-title">选择一条规则</h2><p id="ar-rule-text"></p>
+    <fieldset id="ar-editor" disabled><legend>条件草稿</legend>
+      <div class="ar-fields"><label>目标时长（秒，可留空）<input id="ar-duration" type="number" min="0.001" step="any"></label><label><input id="ar-illustration" type="checkbox">画面只能示意</label></div>
+      <label>画面证明不了的部分<textarea id="ar-unprovable" rows="2"></textarea></label><label>说明<textarea id="ar-notes" rows="2"></textarea></label>
+      <p>每行：同维度标签之间为“或”；必须组各行之间为“且”；禁止行中的标签均不得出现。多选标签可按住 Ctrl。</p>
+      <div id="ar-groups"></div><button id="ar-save" type="button">保存草稿</button>
+    </fieldset>
+    <div class="ar-toolbar"><button id="ar-validate" type="button">校验规则包</button><label>业务确认人<input id="ar-reviewer" placeholder="请填写实际确认人"></label><button id="ar-confirm" type="button">确认当前内容</button><button id="ar-publish" type="button">发布版本</button></div>
+    <h3>校验问题（点击定位到规则和条件行）</h3><div id="ar-issues"></div>
+  </section></div>
+</section></main>

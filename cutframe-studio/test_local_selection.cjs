@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const source=file=>fs.readFileSync(path.join(__dirname,'static',file),'utf8');
+const panel=source('subtitle-board.js'),raw=source('storyboard.js'),cards=source('ai-candidates.js');
+const elements={'sb-in':{value:'0'},'sb-match':{value:'direct'}};
+const ctx={board:{mode:'subtitle'},sbMeta:{duration:4},sbFixedLength:()=>2,$:id=>elements[id]};
+vm.createContext(ctx);vm.runInContext(panel.slice(panel.indexOf('function sbAdoptProblem'),panel.indexOf('function sbFixedLength')),ctx);
+const candidate={run:{review:{missing:['A','B','C'],complete:false,records:{}}},item:{slot:'B'}};
+assert.equal(ctx.sbAdoptProblem(candidate),'');assert.match(ctx.sbAdoptProblem({...candidate,item:null}),/本轮候选/);
+candidate.run.review.records.B={verdict:'不合适'};assert.match(ctx.sbAdoptProblem(candidate),/已确认不合适/);
+delete candidate.run.review.records.B;
+elements['sb-match'].value='';assert.match(ctx.sbAdoptProblem(candidate),/对应文案/);elements['sb-match'].value='direct';
+elements['sb-in'].value='3';assert.match(ctx.sbAdoptProblem(candidate),/开始位置/);
+assert.match(raw,/b.onclick=\(\)=>sbSelect\(a\)/);assert.match(cards,/await sbSelect\(aiCandidate/);
+assert.ok(panel.includes("await api('/api/local/slot-adopt'"));
+console.log('未评价可选入，已确认不合适、缺少画面关系和越界入点仍有提示');

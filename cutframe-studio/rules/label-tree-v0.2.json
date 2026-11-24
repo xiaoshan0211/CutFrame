@@ -1,0 +1,2175 @@
+{
+  "schema_version": 1,
+  "label_version": "v0.2",
+  "dimensions": [
+    {
+      "id": "画面类型",
+      "name": "画面类型",
+      "prefix": "V",
+      "source_section": "B1"
+    },
+    {
+      "id": "来源",
+      "name": "来源",
+      "prefix": "A2S",
+      "source_section": "A2"
+    },
+    {
+      "id": "可用状态",
+      "name": "可用状态",
+      "prefix": "A3U",
+      "source_section": "A3"
+    },
+    {
+      "id": "是否有人脸",
+      "name": "是否有人脸",
+      "prefix": "A3F",
+      "source_section": "A3"
+    },
+    {
+      "id": "是否有门牌",
+      "name": "是否有门牌",
+      "prefix": "A3D",
+      "source_section": "A3"
+    },
+    {
+      "id": "是否有车牌",
+      "name": "是否有车牌",
+      "prefix": "A3P",
+      "source_section": "A3"
+    },
+    {
+      "id": "空间",
+      "name": "空间",
+      "prefix": "B2S",
+      "source_section": "B2"
+    },
+    {
+      "id": "部位",
+      "name": "部位",
+      "prefix": "B3P",
+      "source_section": "B3"
+    },
+    {
+      "id": "阶段",
+      "name": "阶段",
+      "prefix": "B4S",
+      "source_section": "B4"
+    },
+    {
+      "id": "人数",
+      "name": "人数",
+      "prefix": "B5N",
+      "source_section": "B5"
+    },
+    {
+      "id": "角色",
+      "name": "角色",
+      "prefix": "B5R",
+      "source_section": "B5"
+    },
+    {
+      "id": "朝向",
+      "name": "朝向",
+      "prefix": "B5O",
+      "source_section": "B5"
+    },
+    {
+      "id": "说话",
+      "name": "说话",
+      "prefix": "B5T",
+      "source_section": "B5"
+    },
+    {
+      "id": "身份",
+      "name": "身份",
+      "prefix": "B5I",
+      "source_section": "B5"
+    },
+    {
+      "id": "批刮的遍数",
+      "name": "批刮的遍数",
+      "prefix": "B6P",
+      "source_section": "B6"
+    },
+    {
+      "id": "材料类目",
+      "name": "材料类目",
+      "prefix": "B7M",
+      "source_section": "B7"
+    },
+    {
+      "id": "材料依据等级",
+      "name": "材料依据等级",
+      "prefix": "B7E",
+      "source_section": "B7"
+    },
+    {
+      "id": "基层",
+      "name": "基层",
+      "prefix": "B7B",
+      "source_section": "B7"
+    },
+    {
+      "id": "画幅",
+      "name": "画幅",
+      "prefix": "C1F",
+      "source_section": "C1"
+    },
+    {
+      "id": "景别",
+      "name": "景别",
+      "prefix": "C1S",
+      "source_section": "C1"
+    },
+    {
+      "id": "机位",
+      "name": "机位",
+      "prefix": "C1P",
+      "source_section": "C1"
+    },
+    {
+      "id": "视角",
+      "name": "视角",
+      "prefix": "C1A",
+      "source_section": "C1a"
+    },
+    {
+      "id": "运镜",
+      "name": "运镜",
+      "prefix": "C1M",
+      "source_section": "C1"
+    },
+    {
+      "id": "可用时长",
+      "name": "可用时长",
+      "prefix": "C2D",
+      "source_section": "C2"
+    },
+    {
+      "id": "动作完整",
+      "name": "动作完整",
+      "prefix": "C2A",
+      "source_section": "C2"
+    },
+    {
+      "id": "主体清楚",
+      "name": "主体清楚",
+      "prefix": "C2C",
+      "source_section": "C2"
+    },
+    {
+      "id": "剪口线索",
+      "name": "剪口线索",
+      "prefix": "C2E",
+      "source_section": "C2"
+    },
+    {
+      "id": "转场镜头",
+      "name": "转场镜头",
+      "prefix": "C2T",
+      "source_section": "C2a"
+    },
+    {
+      "id": "画质瑕疵",
+      "name": "画质瑕疵",
+      "prefix": "C3Q",
+      "source_section": "C3"
+    },
+    {
+      "id": "声音",
+      "name": "声音",
+      "prefix": "C4A",
+      "source_section": "C4"
+    },
+    {
+      "id": "可配句意",
+      "name": "可配句意",
+      "prefix": "D1S",
+      "source_section": "D1"
+    },
+    {
+      "id": "举证等级",
+      "name": "举证等级",
+      "prefix": "D1E",
+      "source_section": "D1"
+    },
+    {
+      "id": "出处",
+      "name": "出处",
+      "prefix": "XSO",
+      "source_section": "每个标签都要带的状态"
+    },
+    {
+      "id": "把握",
+      "name": "把握",
+      "prefix": "XCO",
+      "source_section": "每个标签都要带的状态"
+    },
+    {
+      "id": "审核状态",
+      "name": "审核状态",
+      "prefix": "XRE",
+      "source_section": "每个标签都要带的状态"
+    },
+    {
+      "id": "主动作",
+      "name": "主动作",
+      "prefix": "B6A",
+      "source_section": "B6"
+    }
+  ],
+  "attributes": [
+    {
+      "id": "指定目录",
+      "source_section": "A2 目录原名",
+      "type": "原文属性"
+    },
+    {
+      "id": "指定主库编号",
+      "source_section": "A1 主库编号",
+      "type": "原文属性"
+    },
+    {
+      "id": "禁用主库编号",
+      "source_section": "A1 主库编号",
+      "type": "原文属性"
+    },
+    {
+      "id": "身份来源",
+      "source_section": "B5 身份来源",
+      "type": "原文属性"
+    },
+    {
+      "id": "同户配对",
+      "source_section": "D2 同户配对",
+      "type": "原文属性"
+    }
+  ],
+  "labels": [
+    {
+      "id": "A2S01",
+      "name": "自拍·小区项目",
+      "dimension": "来源",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A2S02",
+      "name": "自拍·展厅",
+      "dimension": "来源",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A2S03",
+      "name": "自拍·测试演示",
+      "dimension": "来源",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A2S04",
+      "name": "自拍·人物口播",
+      "dimension": "来源",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A2S05",
+      "name": "自拍·其他",
+      "dimension": "来源",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A2S06",
+      "name": "客户提供",
+      "dimension": "来源",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A2S07",
+      "name": "网采",
+      "dimension": "来源",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3U01",
+      "name": "可用",
+      "dimension": "可用状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3U02",
+      "name": "需打码后可用",
+      "dimension": "可用状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3U03",
+      "name": "仅限该客户自己的片子",
+      "dimension": "可用状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3U04",
+      "name": "禁用",
+      "dimension": "可用状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3F01",
+      "name": "有",
+      "dimension": "是否有人脸",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3F02",
+      "name": "无",
+      "dimension": "是否有人脸",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3F03",
+      "name": "看不清",
+      "dimension": "是否有人脸",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3D01",
+      "name": "有",
+      "dimension": "是否有门牌",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3D02",
+      "name": "无",
+      "dimension": "是否有门牌",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3D03",
+      "name": "看不清",
+      "dimension": "是否有门牌",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3P01",
+      "name": "有",
+      "dimension": "是否有车牌",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3P02",
+      "name": "无",
+      "dimension": "是否有车牌",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "A3P03",
+      "name": "看不清",
+      "dimension": "是否有车牌",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S01",
+      "name": "卫生间",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S02",
+      "name": "厨房",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S03",
+      "name": "客厅餐厅",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S04",
+      "name": "卧室",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S05",
+      "name": "阳台",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S06",
+      "name": "楼梯过道",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S07",
+      "name": "入户门口",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S08",
+      "name": "小区楼栋外",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S09",
+      "name": "城市街景或地标",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S10",
+      "name": "展厅",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S11",
+      "name": "车旁或仓库",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S12",
+      "name": "样板台",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S13",
+      "name": "室内，分不清房间",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B2S14",
+      "name": "看不清",
+      "dimension": "空间",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P01",
+      "name": "墙面",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P02",
+      "name": "地面",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P03",
+      "name": "顶面",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P04",
+      "name": "墙角与交界",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P05",
+      "name": "台面柜体",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P06",
+      "name": "洁具",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P07",
+      "name": "门窗",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P08",
+      "name": "样板",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P09",
+      "name": "料桶",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B3P10",
+      "name": "无（主体是人或整个空间）",
+      "dimension": "部位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S01",
+      "name": "旧状（未动工）",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S02",
+      "name": "拆除铲除中",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S03",
+      "name": "保护与基层处理",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S04",
+      "name": "上料施工中",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S05",
+      "name": "罩面收尾",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S06",
+      "name": "安装收口",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S07",
+      "name": "施工中途（没人干活）",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S08",
+      "name": "完工空房",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S09",
+      "name": "入住使用",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S10",
+      "name": "非现场",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S11",
+      "name": "其他",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B4S12",
+      "name": "看不清",
+      "dimension": "阶段",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5N01",
+      "name": "0",
+      "dimension": "人数",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5N02",
+      "name": "1",
+      "dimension": "人数",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5N03",
+      "name": "2",
+      "dimension": "人数",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5N04",
+      "name": "3 以上",
+      "dimension": "人数",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5R01",
+      "name": "主讲人",
+      "dimension": "角色",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5R02",
+      "name": "工人",
+      "dimension": "角色",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5R03",
+      "name": "客户业主",
+      "dimension": "角色",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5R04",
+      "name": "长者",
+      "dimension": "角色",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5R05",
+      "name": "儿童",
+      "dimension": "角色",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5R06",
+      "name": "路人",
+      "dimension": "角色",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5R07",
+      "name": "只见手脚",
+      "dimension": "角色",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5O01",
+      "name": "看镜头",
+      "dimension": "朝向",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5O02",
+      "name": "露脸但不看镜头",
+      "dimension": "朝向",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5O03",
+      "name": "背面",
+      "dimension": "朝向",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5O04",
+      "name": "看不见头脸",
+      "dimension": "朝向",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5O05",
+      "name": "无人",
+      "dimension": "朝向",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5T01",
+      "name": "是",
+      "dimension": "说话",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5T02",
+      "name": "否",
+      "dimension": "说话",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5T03",
+      "name": "看不清",
+      "dimension": "说话",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5I01",
+      "name": "阿文",
+      "dimension": "身份",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5I02",
+      "name": "示例负责人",
+      "dimension": "身份",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5I03",
+      "name": "示例助手",
+      "dimension": "身份",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5I04",
+      "name": "示例监理",
+      "dimension": "身份",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5I05",
+      "name": "示例业主",
+      "dimension": "身份",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5I06",
+      "name": "客户方人物",
+      "dimension": "身份",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B5I07",
+      "name": "未确认",
+      "dimension": "身份",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6P01",
+      "name": "第一遍（陶砂打底）",
+      "dimension": "批刮的遍数",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6P02",
+      "name": "第二遍（陶泥收面）",
+      "dimension": "批刮的遍数",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6P03",
+      "name": "未知",
+      "dimension": "批刮的遍数",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M01",
+      "name": "微陶泥",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M02",
+      "name": "液态陶泥",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M03",
+      "name": "微岩石",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M04",
+      "name": "微彩陶",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M05",
+      "name": "微瓷釉",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M06",
+      "name": "清瓷水漆",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M07",
+      "name": "磨石地坪",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M08",
+      "name": "微水泥",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M09",
+      "name": "墙布墙膜",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M10",
+      "name": "泛海展厅新材料",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M11",
+      "name": "其他",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7M12",
+      "name": "未辨明",
+      "dimension": "材料类目",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7E01",
+      "name": "目录标称",
+      "dimension": "材料依据等级",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7E02",
+      "name": "包装可见",
+      "dimension": "材料依据等级",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7E03",
+      "name": "质感判断",
+      "dimension": "材料依据等级",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7E04",
+      "name": "人工确认",
+      "dimension": "材料依据等级",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7E05",
+      "name": "无",
+      "dimension": "材料依据等级",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7B01",
+      "name": "旧瓷砖且砖缝可见",
+      "dimension": "基层",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7B02",
+      "name": "旧瓷砖但砖缝看不见",
+      "dimension": "基层",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7B03",
+      "name": "水泥或腻子",
+      "dimension": "基层",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7B04",
+      "name": "网格布",
+      "dimension": "基层",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7B05",
+      "name": "已成形饰面",
+      "dimension": "基层",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7B06",
+      "name": "样板",
+      "dimension": "基层",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B7B07",
+      "name": "看不清",
+      "dimension": "基层",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1F01",
+      "name": "竖",
+      "dimension": "画幅",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1F02",
+      "name": "横",
+      "dimension": "画幅",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1S01",
+      "name": "特写",
+      "dimension": "景别",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1S02",
+      "name": "近景",
+      "dimension": "景别",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1S03",
+      "name": "中景",
+      "dimension": "景别",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1S04",
+      "name": "全景",
+      "dimension": "景别",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1S05",
+      "name": "远景",
+      "dimension": "景别",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1P01",
+      "name": "平拍",
+      "dimension": "机位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1P02",
+      "name": "俯拍",
+      "dimension": "机位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1P03",
+      "name": "仰拍",
+      "dimension": "机位",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1A01",
+      "name": "第一视角",
+      "dimension": "视角",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1A02",
+      "name": "旁观拍摄",
+      "dimension": "视角",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1A03",
+      "name": "看不清",
+      "dimension": "视角",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1M01",
+      "name": "固定",
+      "dimension": "运镜",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1M02",
+      "name": "推",
+      "dimension": "运镜",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1M03",
+      "name": "拉",
+      "dimension": "运镜",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1M04",
+      "name": "横移",
+      "dimension": "运镜",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1M05",
+      "name": "跟随",
+      "dimension": "运镜",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1M06",
+      "name": "摇",
+      "dimension": "运镜",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C1M07",
+      "name": "明显晃动",
+      "dimension": "运镜",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2D01",
+      "name": "不足 1 秒",
+      "dimension": "可用时长",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2D02",
+      "name": "1–2 秒",
+      "dimension": "可用时长",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2D03",
+      "name": "2–4 秒",
+      "dimension": "可用时长",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2D04",
+      "name": "4 秒以上",
+      "dimension": "可用时长",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2A01",
+      "name": "有起有收",
+      "dimension": "动作完整",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2A02",
+      "name": "只有中段",
+      "dimension": "动作完整",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2A03",
+      "name": "无动作",
+      "dimension": "动作完整",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2C01",
+      "name": "清楚",
+      "dimension": "主体清楚",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2C02",
+      "name": "被遮挡",
+      "dimension": "主体清楚",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2C03",
+      "name": "虚焦或过暗",
+      "dimension": "主体清楚",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2C04",
+      "name": "晃得不能用",
+      "dimension": "主体清楚",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2E01",
+      "name": "遮镜",
+      "dimension": "剪口线索",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2E02",
+      "name": "转身",
+      "dimension": "剪口线索",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2E03",
+      "name": "入画",
+      "dimension": "剪口线索",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2E04",
+      "name": "出画",
+      "dimension": "剪口线索",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2E05",
+      "name": "收刀停稳",
+      "dimension": "剪口线索",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2E06",
+      "name": "推门揭示",
+      "dimension": "剪口线索",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2E07",
+      "name": "无",
+      "dimension": "剪口线索",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2T01",
+      "name": "是",
+      "dimension": "转场镜头",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C2T02",
+      "name": "否",
+      "dimension": "转场镜头",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C3Q01",
+      "name": "无",
+      "dimension": "画质瑕疵",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C3Q02",
+      "name": "平台水印或账号",
+      "dimension": "画质瑕疵",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C3Q03",
+      "name": "平台尾卡",
+      "dimension": "画质瑕疵",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C3Q04",
+      "name": "烧录字幕",
+      "dimension": "画质瑕疵",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C3Q05",
+      "name": "后期贴纸标签",
+      "dimension": "画质瑕疵",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C3Q06",
+      "name": "消字涂抹痕迹",
+      "dimension": "画质瑕疵",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C3Q07",
+      "name": "低清",
+      "dimension": "画质瑕疵",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C3Q08",
+      "name": "他方品牌包装入镜",
+      "dimension": "画质瑕疵",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C4A01",
+      "name": "无音轨",
+      "dimension": "声音",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C4A02",
+      "name": "只有环境声",
+      "dimension": "声音",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C4A03",
+      "name": "有人说话（附机器转写）",
+      "dimension": "声音",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "C4A04",
+      "name": "可作原声口播（人工确认）",
+      "dimension": "声音",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "D1S01",
+      "name": "爆款常用",
+      "dimension": "可配句意",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "D1S02",
+      "name": "爆款用过",
+      "dimension": "可配句意",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "D1E01",
+      "name": "示意",
+      "dimension": "举证等级",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "D1E02",
+      "name": "可举证",
+      "dimension": "举证等级",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XSO01",
+      "name": "目录",
+      "dimension": "出处",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XSO02",
+      "name": "机器",
+      "dimension": "出处",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XSO03",
+      "name": "人工",
+      "dimension": "出处",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XCO01",
+      "name": "确定",
+      "dimension": "把握",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XCO02",
+      "name": "不确定",
+      "dimension": "把握",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XRE01",
+      "name": "未审",
+      "dimension": "审核状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XRE02",
+      "name": "互检一致",
+      "dimension": "审核状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XRE03",
+      "name": "抽审通过",
+      "dimension": "审核状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XRE04",
+      "name": "人工确认",
+      "dimension": "审核状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "XRE05",
+      "name": "人工改正",
+      "dimension": "审核状态",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V01",
+      "name": "人物对镜头",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V13",
+      "name": "成品空间（空镜）",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V24",
+      "name": "人物在现场（不看镜头）",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V14",
+      "name": "旧→新同镜转场",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V02",
+      "name": "握手/与客户沟通",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V15",
+      "name": "成品里的人",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V03",
+      "name": "团队上门/搬料搬物",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V16",
+      "name": "手摸/手指成品",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V04",
+      "name": "量房/水电/安装",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V17",
+      "name": "成品日常清洁",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V05",
+      "name": "施工·批刮覆盖",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V18",
+      "name": "演示·喷水冲洗",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V06",
+      "name": "施工·滚涂",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V19",
+      "name": "演示·弯折样板/揭薄层",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V23",
+      "name": "施工现场·其他",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V20",
+      "name": "演示·刮擦/擦污",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V07",
+      "name": "铲修旧墙/旧顶",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V21",
+      "name": "老楼/城市外景",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V08",
+      "name": "拆砸/贴砖（传统做法）",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V22",
+      "name": "其他",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V09",
+      "name": "铺保护膜/贴胶带",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V10",
+      "name": "保洁/清扫（施工前后）",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V11",
+      "name": "材料桶（取料/搅拌/桶特写）",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "V12",
+      "name": "旧房旧态",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B1U01",
+      "name": "看不清",
+      "dimension": "画面类型",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6A01",
+      "name": "遮镜",
+      "dimension": "主动作",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6A02",
+      "name": "无动作（空镜）",
+      "dimension": "主动作",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6A03",
+      "name": "其他",
+      "dimension": "主动作",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6A04",
+      "name": "看不清",
+      "dimension": "主动作",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C00",
+      "name": "施工类",
+      "dimension": "主动作",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定",
+      "group": true
+    },
+    {
+      "id": "B6C01",
+      "name": "批刮",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C02",
+      "name": "滚涂",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C03",
+      "name": "刷涂",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C04",
+      "name": "搅拌",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C05",
+      "name": "倒料取料",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C06",
+      "name": "打磨",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C07",
+      "name": "铲除",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C08",
+      "name": "拆砸",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C09",
+      "name": "拆卸",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C10",
+      "name": "贴砖",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C11",
+      "name": "铺膜贴胶带",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C12",
+      "name": "安装",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C13",
+      "name": "测量",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C14",
+      "name": "清扫吸尘",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6C15",
+      "name": "收拾整理",
+      "dimension": "主动作",
+      "parent": "B6C00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H00",
+      "name": "人物类",
+      "dimension": "主动作",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定",
+      "group": true
+    },
+    {
+      "id": "B6H01",
+      "name": "握手",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H02",
+      "name": "交谈讲解",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H03",
+      "name": "指向示意",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H04",
+      "name": "手势",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H05",
+      "name": "查看",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H06",
+      "name": "行走",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H07",
+      "name": "走入进门",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H08",
+      "name": "搬运",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H09",
+      "name": "挥手",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H10",
+      "name": "转身",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H11",
+      "name": "开门推门",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6H12",
+      "name": "展示",
+      "dimension": "主动作",
+      "parent": "B6H00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6D00",
+      "name": "成品与演示类",
+      "dimension": "主动作",
+      "parent": null,
+      "enabled": true,
+      "vocabulary_layer": "待定",
+      "group": true
+    },
+    {
+      "id": "B6D01",
+      "name": "手摸",
+      "dimension": "主动作",
+      "parent": "B6D00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6D02",
+      "name": "展示细节",
+      "dimension": "主动作",
+      "parent": "B6D00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6D03",
+      "name": "拖地擦洗",
+      "dimension": "主动作",
+      "parent": "B6D00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6D04",
+      "name": "喷水冲水",
+      "dimension": "主动作",
+      "parent": "B6D00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6D05",
+      "name": "弯折",
+      "dimension": "主动作",
+      "parent": "B6D00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    },
+    {
+      "id": "B6D06",
+      "name": "刮擦敲击",
+      "dimension": "主动作",
+      "parent": "B6D00",
+      "enabled": true,
+      "vocabulary_layer": "待定"
+    }
+  ],
+  "note": "以第三节选项为准；词表层尚未经业务逐项定级，统一待定；group为原文明示分组，不是可选标签。"
+}

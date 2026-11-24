@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const core=require('./static/storyboard-core.js');
+const board={tasks:[{id:'a',start:0,end:2,text:'施工',need:'施工动作'},{id:'b',start:2,end:4,text:'效果',need:'空间展示'}],candidates:[]};
+let shots=[{start:1,end:5,task_ids:['a','b'],source_duration:10}];
+assert.deepEqual(core.issues(board,shots,4),[],'一镜跨两段允许');
+assert(core.issues(board,[{...shots[0],task_ids:['a']}],4).some(x=>x.includes('未被关联')));
+assert(core.issues(board,[{...shots[0],end:4}],4).some(x=>x.includes('总时长')));
+assert(core.issues(board,[{...shots[0],end:15}],4).some(x=>x.includes('范围')));
+const before=core.signature(board,shots,'配音1');
+assert.notEqual(before,core.signature(board,shots,'配音2'));
+assert.notEqual(before,core.signature(board,[{...shots[0],start:2}],'配音1'));
+board.tasks[1].missing=true;
+assert(core.issues(board,shots,4).some(x=>x.includes('缺素材')));
+console.log('选片覆盖、跨段关联、时长、越界和确认失效检查通过');

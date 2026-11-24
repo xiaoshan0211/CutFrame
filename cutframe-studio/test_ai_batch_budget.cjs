@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const source=file=>fs.readFileSync(path.join(__dirname,'static',file),'utf8');
+const local=source('local-selection.js'),panel=source('ai-candidates.js');
+assert.doesNotMatch(panel+local,/api\/ai\/(discover|search|status|retrieval-rules)|ai-source-mode|aiBudgetBlock/);
+const nodes={},ctx={localRequests:new Map(),aiTaskKey:()=>'当前',localView:{},localTaskKey:'当前',localTypesEdited:()=>false,localSelectedTypes:()=>[],aiRuns:[],slotMatchesCurrent:()=>true,sbTask:()=>({}),projectId:'p',sbFixedUpdate(){},$:id=>(nodes[id]??={})};
+ctx.board={context:'已同步'};ctx.sbContext=()=>ctx.board.context;
+ctx.aiRun=()=>ctx.aiRuns[0];vm.createContext(ctx);vm.runInContext(local.slice(local.indexOf('function slotButtons'),local.indexOf('function slotSummary')),ctx);
+ctx.slotButtons();assert.equal(nodes['ai-search'].disabled,false);assert.match(nodes['ai-search'].textContent,/选类型/);assert.equal(nodes['ai-next'].disabled,true);
+ctx.localSelectedTypes=()=>['V01'];
+ctx.slotIsLatest=run=>run===ctx.aiRuns[0];
+ctx.aiRuns=[{result:{slot_review:true,items:[{slot:'A'}]},review:{complete:false}}];ctx.slotButtons();assert.equal(nodes['ai-search'].disabled,true);assert.equal(nodes['ai-next'].disabled,false);
+ctx.localTypesEdited=()=>true;ctx.slotButtons();assert.equal(nodes['ai-search'].disabled,false);assert.equal(nodes['ai-next'].disabled,true);
+ctx.localTypesEdited=()=>false;ctx.aiRuns[0].review.complete=true;ctx.slotButtons();assert.equal(nodes['ai-next'].disabled,false);
+ctx.localTypesEdited=()=>false;ctx.localSelectedTypes=()=>['V01'];ctx.aiRuns[0].result.items=[];ctx.slotButtons();
+assert.equal(nodes['ai-search'].hidden,false);assert.equal(nodes['ai-search'].disabled,false);assert.equal(nodes['ai-next'].hidden,true);
+console.log('单条检索仅走标签库，未评价即可换批，空批次仍可重试');

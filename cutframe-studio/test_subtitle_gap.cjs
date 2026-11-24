@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict'),C=require('./static/subtitle-board-core.js');
+const tasks=[{id:'a',text:'厨房',start:0,end:13.58},{id:'b',text:'卫生间',start:14.22,end:15.76}];
+const shots=[{asset_id:'a',task_ids:['a'],timeline_start:0,start:1,end:14.58,source_duration:20,available_end:14.58},{asset_id:'b',task_ids:['b'],timeline_start:14.22,start:0,end:1.54,source_duration:10,available_end:1.54}];
+const before=JSON.stringify(shots),plan=C.playbackPlan(tasks,shots,16.22);
+assert.equal(plan.errors.length,0);assert(Math.abs(plan.shots[0].end-15.22)<1e-9);assert(Math.abs(plan.shots[1].end-2)<1e-9);assert.equal(JSON.stringify(shots),before);
+for(const time of [13.57,13.63,14.21,14.22,15.8,16.21])assert.equal(plan.shots.filter(s=>time>=s.timeline_start&&time<s.timeline_start+s.end-s.start).length,1);
+assert.deepEqual(C.playbackPlan(tasks,shots,16.22),plan);
+const short=structuredClone(shots);short[0].source_duration=15;const failed=C.playbackPlan(tasks,short,16.22);assert(failed.errors.some(e=>e.includes('原片剩余不足')));assert.equal(failed.shots[0].end,14.58);
+const dual=[{...shots[0],end:3},{...shots[0],timeline_start:2,start:5,end:16.58,source_duration:30},shots[1]];const dualPlan=C.playbackPlan(tasks,dual,16.22);assert.equal(dualPlan.errors.length,0);assert.equal(dualPlan.shots[0].end,3);assert(Math.abs(dualPlan.shots[1].end-17.22)<1e-9);
+assert(C.playbackPlan([{...tasks[0],start:1}],shots,13.58).errors.some(e=>e.includes('片头')));
+assert(C.playbackPlan([tasks[0],{...tasks[1],start:13}],shots,16).errors.some(e=>e.includes('重叠')));
+console.log('字幕停顿续播：13.63秒有画面、下一句精准接入、片尾覆盖、双镜只延续末镜、原片不足拦截、重复计算不累计、原选择不变通过');

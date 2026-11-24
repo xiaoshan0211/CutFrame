@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const source=file=>fs.readFileSync(path.join(__dirname,'static',file),'utf8');
+const panel=['storyboard.js','subtitle-board.js','ai-candidates.js','local-selection.js'].map(source).join('\n');
+const template=fs.readFileSync(path.join(__dirname,'templates/index.html'),'utf8');
+assert.doesNotMatch(template,/ai-batch\.js/);
+assert.doesNotMatch(panel,/ai-batch-|cutframe-candidates-batch|sb-candidate['"]|sb-audition|sb-fallback|候选比较|将本批全部|再找10个/);
+assert.equal((panel.match(/id="sb-adopt"/g)||[]).length,1);
+assert.equal((panel.match(/<video\s/g)||[]).length,1);
+assert.match(panel,/id="sb-player"/);
+console.log('批量队列、并列视频和重复选入入口均已移除');

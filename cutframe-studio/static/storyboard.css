@@ -1,0 +1,26 @@
+.sb-columns{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(270px,1.2fr);gap:20px}.sb-columns>section{min-width:0}.sb-task{border:1px solid var(--line);border-radius:8px;padding:12px;margin:10px 0}.sb-task.selected{border-color:var(--accent)}.sb-task button{margin:4px 0}.sb-result{display:block;text-align:left;width:100%;margin:6px 0}.sb-result small{display:block;overflow-wrap:anywhere;color:var(--muted)}#sb-results{max-height:340px;overflow:auto}#sb-player{width:100%;max-height:320px;background:#050807}#sb-source{margin:24px 0;padding:16px;border:1px solid var(--line)}#sb-source-info{overflow-wrap:anywhere}.sb-candidate{border-bottom:1px solid var(--line);padding:12px 0}.sb-links label{display:flex;gap:8px;align-items:center;font-size:12px}.sb-links input{width:auto}.sb-active .wf-layout{grid-template-columns:minmax(0,1fr) 280px}.sb-active .wf-editor{padding:16px}.sb-active .wf-preview{top:10px}.sb-active .composition{max-width:none}#sb-status button{margin:8px}.sb-task textarea{min-height:70px}@media(max-width:1150px){.sb-active .wf-layout{grid-template-columns:1fr}.sb-active .wf-preview{position:static;max-width:340px;margin:auto}}@media(max-width:700px){.sb-columns{grid-template-columns:1fr}}
+
+
+#sb-workbench [hidden],.sb-studio .wf-preview{display:none!important}
+.composition.sb-studio{max-width:1900px;padding:0 20px}
+.sb-studio .wf-layout{display:block}
+.sb-studio .sb-columns{display:grid;grid-template-columns:minmax(175px,.72fr) minmax(310px,1.55fr) minmax(245px,1fr);align-items:start}
+.sb-studio #sb-tasks{max-height:76vh;overflow:auto}
+.sb-studio #sb-source{position:sticky;top:12px;margin:0;min-width:0}
+.sb-studio #sb-player{max-height:36vh;background:#080b0c}
+#sb-workbench details{margin:.7em 0}
+#sb-next-issues{max-height:220px;overflow:auto}
+#sb-source-name,#sb-fixed-status{overflow-wrap:anywhere}
+.sb-studio #ai-cards{grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr))}
+@media(max-width:820px){.sb-studio .sb-columns{grid-template-columns:1fr}.sb-studio #sb-source{position:static}.sb-studio #sb-tasks{max-height:240px}}
+
+.sb-studio>.section-head{display:none}
+.sb-studio .wf-editor label{margin:7px 0}
+.sb-studio .local-conditions{margin:8px 0;padding:10px}
+#local-picture{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:2px 8px}
+#local-picture span{display:flex;align-items:baseline;gap:5px}
+#local-picture input{width:auto;margin:0}
+.sb-studio #local-picture label{display:inline;cursor:pointer;margin:3px 0;font-size:.9em}
+.sb-studio .local-conditions h4{margin:0}
+.sb-studio #ai-cards{max-height:none}
+.sb-studio #sb-tasks:empty::after{content:'请先同步已保存字幕'}

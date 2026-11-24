@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CutFrame · 方案落地进度</title><link rel="stylesheet" href="/static/progress.css"><script defer src="/static/progress.js"></script></head>
+<body><header><a href="/">← 返回精裁工具</a><span id="sync" role="status">读取台账…</span></header>
+<main><p class="eyebrow">CUTFRAME / 从人工精裁到可验证的选片学习</p><h1>方案落地进度</h1><p>先验证你选好片能生成合格成片，再验证模型能否替你选好片。</p>
+<section id="metrics" class="metrics" aria-label="进度统计"></section>
+<p class="muted">进度按任务数量计算，不代表工时或成片质量；进行中不折算完成。当前范围与后期路线分开统计。「已完成」只代表该行描述的工作，技术测试不替代业务验收。</p>
+
+<h2>全流程与阶段进度</h2><p class="muted">按顺序展示；点击阶段查看细项。后期阶段尚未启动，需另行确认方案。</p><div id="flow" class="flow"></div>
+<h2>逐项任务台账</h2><div class="filters"><label>范围<select id="scope"><option value="">全部范围</option><option>当前</option><option>后期</option></select></label><label>状态<select id="status"><option value="">全部状态</option><option>已完成</option><option>进行中</option><option>待验收</option><option>等待输入</option><option>待开始</option></select></label><label>阶段<select id="phase"><option value="">全部阶段</option></select></label><label class="search">查找任务、证据或下一步<input id="query" type="search" placeholder="例如：配音、HDR、云端、切点"></label><button id="reset">重置筛选</button></div>
+<p id="count" aria-live="polite"></p><div class="table-wrap"><table><thead><tr><th>编号 / 阶段</th><th>任务</th><th>状态</th><th>证据、限制与下一步</th></tr></thead><tbody id="tasks"></tbody></table></div>
+<details><summary>状态口径、证据来源与更新方式</summary><p>已完成：该项描述的交付有记录支持。进行中：实际正在开展。待验收：已有功能，但专项测试或用户确认尚未完成。等待输入：缺用户材料或决定。待开始：尚未实施或尚未专项验证。</p><p>每做完环节，由开发助手核查证据、更新状态并追加历史；页面每10秒读取最新台账。刷新网页不会自动把任务判定完成，也不会代替人工验收。未持续运行的助手不会在后台自动开展任务。</p></details>
+<details open><summary>变更记录</summary><ol id="history"></ol></details></main></body></html>

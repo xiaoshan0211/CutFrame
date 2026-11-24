@@ -1,0 +1,39 @@
+.brand h1 { margin: 0; font-size: 18px; }
+header a { color: var(--muted); }
+main { max-width: 1320px; margin: 0 auto; padding: 20px 24px 80px; }
+main nav { margin-bottom: 16px; }
+.columns { display: grid; grid-template-columns: minmax(245px, 0.7fr) minmax(0, 1.65fr); gap: 16px; align-items: start; }
+.panel { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.panel h2 { font-size: 18px; }
+fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+fieldset:disabled { opacity: 0.65; }
+.source-list { overflow-y: auto; max-height: 54vh; }
+.asset[aria-pressed=true] { background: #29352a; border-color: #59734b; }
+.button-row { flex-wrap: wrap; margin: 8px 0 12px; }
+video { display: block; height: clamp(210px, 33vh, 440px); border-radius: 7px; background: #080b0d; }
+.check { display: flex; align-items: center; gap: 8px; color: var(--text); font-size: 13px; margin: 6px 0; }
+.check input { width: auto; margin: 0; accent-color: var(--accent); }
+#confirm { margin-top: 8px; }
+.status { font-size: 13px; overflow-wrap: anywhere; }
+.status.error, .error { color: #ffa99c; }
+.status:empty, .small:empty { display: none; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; align-items: baseline; margin: 14px 0; }
+dt { color: var(--muted); font-size: 12px; }
+dd { margin: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+#guidance { border-left: 2px solid var(--accent); padding-left: 10px; }
+#guidance dl { display: block; }
+#guidance dd { margin-bottom: 5px; }
+#type-picker { margin: 16px 0; }
+summary { color: var(--muted); cursor: pointer; }
+#other-types { max-height: 260px; overflow-y: auto; }
+#history-panel { border-top: 1px solid var(--line); margin-top: 22px; padding-top: 18px; }
+.history-row { padding: 10px 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.history-row p { margin: 3px 0; }
+#save-rating { align-self: end; margin-bottom: 8px; }
+@media(max-width: 740px) {
+  main { padding: 16px 10px 50px; }
+  .columns { grid-template-columns: 1fr; }
+  .source-list { max-height: 190px; }
+  .panel { padding: 16px; }
+  header .brand { gap: 8px; }
+}

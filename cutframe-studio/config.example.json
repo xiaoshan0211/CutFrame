@@ -1,0 +1,17 @@
+{
+  "port": 4380,
+  "lan_access": false,
+  "encoder": "libx264",
+  "roots": {
+    "media": {
+      "label": "本地素材",
+      "role": "raw",
+      "origin": "local",
+      "path": "media"
+    }
+  },
+  "output": "exports",
+  "music_root": "music",
+  "ffmpeg": "ffmpeg",
+  "ffprobe": "ffprobe"
+}

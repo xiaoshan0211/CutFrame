@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="local-token" content="{{ token }}">
+  <title>分类与选片 · 镜序</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/classify-select.css">
+  <script type="module" src="/static/classify-select.js"></script>
+</head>
+<body>
+  <header>
+    <div class="brand"><b>镜序<span> / </span></b><h1>分类与选片</h1></div>
+    <a href="/">返回工作台</a>
+  </header>
+  <main>
+    <nav aria-label="工作模式">
+      <button class="tab active" id="class-tab" aria-pressed="true" aria-controls="class-pane">素材分类</button>
+      <button class="tab" id="pick-tab" aria-pressed="false" aria-controls="pick-pane">文案选片</button>
+    </nav>
+    <section id="class-pane">
+      <div class="columns">
+        <aside class="panel">
+          <h2>选原片</h2>
+          <form id="asset-query">
+            <label>素材库<select id="library" required></select></label>
+            <label>文件名或项目路径<input type="search" id="asset-query-text"></label>
+            <button type="submit">搜索原片</button>
+          </form>
+          <p id="asset-status" class="small" role="status"></p>
+          <div id="asset-list" class="source-list"></div>
+          <div class="pager"><button id="asset-prev" disabled>上一页</button><span id="asset-page"></span><button id="asset-next" disabled>下一页</button></div>
+        </aside>
+        <section class="panel">
+          <h2 id="asset-name">选择原片后标记秒段</h2>
+          <p id="asset-path" class="small"></p>
+          <video id="source-video" controls playsinline preload="metadata" aria-label="分类原片预览"></video>
+          <p id="source-status" class="small" role="status"></p>
+          <button type="button" id="source-proxy" hidden>生成本地兼容预览</button>
+          <form id="confirm-form">
+            <fieldset id="class-fields" disabled>
+              <div class="form-grid">
+                <label>起秒<input id="start-sec" type="number" min="0" step="0.001" required></label>
+                <label>止秒<input id="end-sec" type="number" min="0" step="0.001" required></label>
+              </div>
+              <div class="button-row">
+                <button type="button" id="set-start">当前帧设为起点</button><button type="button" id="set-end">当前帧设为止点</button><button type="button" id="play-segment">播放选段</button>
+              </div>
+              <div class="form-grid">
+                <label>画面类型<select id="picture-type" required><option value="">选择画面类型</option></select></label>
+                <label>阶段<select id="stage"><option value="">选择阶段</option><option>旧状</option><option>施工中</option><option>完工</option><option>看不清</option></select></label>
+              </div>
+              <label>画面依据<input id="evidence" placeholder="这几秒里实际看见的动作"></label>
+              <label>备注<input id="class-note" placeholder="选「其他」时写出画面主体"></label>
+              <label>审核人<input id="reviewer" required autocomplete="name"></label>
+              <label class="check"><input type="checkbox" id="watched" required>我已看过所选原片的这个秒段</label>
+              <button class="primary" type="submit" id="confirm">保存人工确认</button>
+            </fieldset>
+          </form>
+          <p class="status" id="class-status" role="status"></p>
+        </section>
+      </div>
+    </section>
+    <section id="pick-pane" hidden>
+      <div class="columns">
+        <aside class="panel">
+          <h2>按文案找画面</h2>
+          <form id="search-form">
+            <label>原句<textarea id="sentence" rows="3" required></textarea></label>
+            <label>观点或用途<select id="purpose" required><option value="">选择观点或用途</option></select></label>
+            <label>这句是肯定还是否定<select id="polarity" required><option value="">选择</option><option>肯定</option><option>否定</option></select></label>
+            <label>选镜意图<textarea id="intent" rows="2" placeholder="用一句话写出观众能看见的动作" required></textarea></label>
+            <div id="guidance"></div>
+            <fieldset id="type-picker" hidden>
+              <legend>查找的画面类型</legend>
+              <div id="recommended-types"></div>
+              <details><summary>选择其他画面类型</summary><div id="other-types"></div></details>
+            </fieldset>
+            <button class="primary" type="submit" id="search">从 500 条总表找候选</button>
+          </form>
+        </aside>
+        <section class="panel">
+          <h2>候选与审核</h2>
+          <p class="status" id="pick-status" role="status">填写原句、观点或用途、肯否和选镜意图后查找。</p>
+          <div id="candidates" hidden>
+            <label>候选原片<select id="candidate"></select></label>
+            <div class="button-row"><button id="candidate-prev">上一个</button><button id="candidate-next">下一个</button><button id="more-six" hidden>下一批 6 条</button></div>
+            <video id="pick-video" controls playsinline preload="metadata" aria-label="候选秒段预览"></video>
+            <p id="pick-media-status" class="small" role="status"></p>
+            <dl id="candidate-info"></dl>
+            <form id="rating-form">
+              <label>本段可见动作<input id="action" placeholder="看片后填写实际动作"></label>
+              <label>评分理由<textarea id="reason" rows="2" required></textarea></label>
+              <div class="form-grid">
+                <label>评分<select id="rating" required><option value="">待审核</option><option>合适</option><option>不合适</option><option>勉强</option></select></label>
+                <button type="submit" class="primary" id="save-rating">保存评分</button>
+              </div>
+              <p id="rating-status" class="status" role="status"></p>
+            </form>
+          </div>
+          <section id="history-panel" hidden><h2>相同或相似原句的已有评分</h2><div id="history"></div></section>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
